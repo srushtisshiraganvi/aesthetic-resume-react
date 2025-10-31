@@ -1,0 +1,244 @@
+/* ===============================
+   Theme Variables (Light & Dark)
+================================= */
+:root {
+  --bg: #f8f9fa;
+  --text: #111;
+  --card-bg: #fff;
+  --primary: #6366f1;
+  --btn-bg: #6366f1;
+  --btn-text: #fff;
+  --secondary: #10b981;
+  --secondary-hover: #0e9f6e;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #e0e0e0;
+  --card-bg: #2a2a2a;
+  --primary: #818cf8;
+  --btn-bg: #818cf8;
+  --btn-text: #fff;
+  --secondary: #34d399;
+  --secondary-hover: #059669;
+}
+
+/* ===============================
+   Global Base Styles
+================================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===============================
+   Home Page
+================================= */
+.home-container {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.start-btn {
+  padding: 12px 24px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+  background-color: var(--primary);
+}
+
+.theme-toggle-btn {
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* ===============================
+   Create Page
+================================= */
+.create-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.create-container table {
+  width: 100%;
+}
+
+.create-container td {
+  padding: 12px;
+}
+
+.create-container label {
+  font-weight: bold;
+}
+
+.create-container input,
+.create-container textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* ===============================
+   Preview Page
+================================= */
+.preview-container {
+  padding: 30px;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.resume-card {
+  background-color: var(--card-bg);
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.resume-header h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.resume-header p {
+  margin: 5px 0;
+}
+
+.resume-section {
+  margin-bottom: 20px;
+}
+
+.resume-section h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.resume-section ul {
+  padding-left: 20px;
+}
+
+.resume-section ul li {
+  margin-bottom: 5px;
+}
+
+.resume-summary {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* ===============================
+   Action Buttons
+================================= */
+.action-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.action-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--btn-text);
+}
+
+.action-buttons button:first-child {
+  background-color: var(--primary);
+}
+
+.action-buttons button:last-child {
+  background-color: var(--secondary);
+}
+
+.action-buttons button:last-child:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* ===============================
+   No Data Message
+================================= */
+.no-data {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: white !important;
+    color: black !important;
+    margin: 0;
+  }
+
+  .resume-card {
+    box-shadow: none !important;
+    border: none;
+  }
+
+  button {
+    display: none !important;
+  }
+}
